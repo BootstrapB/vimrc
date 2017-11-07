@@ -14,14 +14,13 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'flazz/vim-colorschemes'
+
+Plugin 'jelera/vim-javascript-syntax'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on 
-
-
-
-
 
 
 
@@ -54,7 +53,25 @@ syntax on
 set number
 " " highlight matching braces
 set showmatch
+
+" " key maps
 inoremap jk <Esc>
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {<CR><BS>}<Esc>ko
+
+
+
+
 set showcmd
 au! FileType python setl nosmartindent
 highlight Comment cterm=bold
+au FileType * set fo-=c fo-=r fo-=o
+
+
+hi MatchParen cterm=none ctermbg=green ctermfg=blue
+
+
+set t_Co=256;
+colorscheme molokai
+
