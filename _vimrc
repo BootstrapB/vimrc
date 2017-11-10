@@ -57,8 +57,8 @@ set showmatch
 " " key maps
 inoremap jk <Esc>
 inoremap JK <Esc>
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
 
 
